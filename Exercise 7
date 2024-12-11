@@ -1,0 +1,37 @@
+# Password Checker
+print("Let's test your password Strength.")
+l = 0
+u = 0
+d = 0
+lower_case = "abcdefghijklmnopqrstuvwxyz"
+upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+digits = "123456789"
+print() #to create space between the lines
+print("Please create your password. It should meet the following criteria: \nAt least 8 characters long\nMust contain at least one uppercase letter\nMust contain at least one lowercase letter\nMust contain at least one number ")
+print()#to create space between the lines
+password = str(input("Enter the password here: "))
+print() #to create space between the lines
+if len(password) < 8:
+    print("Sorry, the password is too short. Try again.")
+    print() #to create space between the lines
+    password = str(input("Enter the password here: "))
+    print() #to create space between the lines
+if len(password) < 8:
+    print("Sorry, the password is too short.")
+else:
+    for x in password:
+        if x in lower_case:
+            l=l+1
+        if x in upper_case:
+            u=u+1
+        if x in digits:
+            d=d+1
+    if l < 1:
+        print("invalid password. You must use at least one small letter")
+    if u < 1:
+        print("Invalid password: You must use at least one capital letter")
+    if d < 1:
+        print("Invalid password: You must use at least one number")
+    else:
+        print("Your password is valid and strong!")
+

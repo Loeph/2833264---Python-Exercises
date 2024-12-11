@@ -1,0 +1,46 @@
+# Hello World + Temperature conversion game
+print("Hello World")
+name = str(input("What is your name? "))
+print() #this would help to create spaces between paragraphs
+print('Nice to meet you,', name+"!")
+print()
+# Now we need to ask about the weather and ask them to convert
+print("What's the weather like today? Is it good?")
+print()
+weather = str(input("Yes or No? ")).lower()
+
+good_weather = None
+bad_weather = None
+
+if weather == "yes":
+    print()
+    print("That is very good. Would you like to try a temperature conversion game?")
+    good_weather = str(input("Yes or No? ")).lower()
+else:
+    print("I'm really sorry about that. To cheer you up, would you like to try a temperature conversion game?")
+    print()
+    bad_weather = str(input("Yes or No? ")).lower()
+if good_weather == "yes":
+    X = int(input("Enter a temperature value: "))
+    print()
+    print("Is this in Celsius or Fahrenheit?")
+    Y = str(input("Type C for Celcius and F for Ferenheit: ")).lower()
+    print()
+    if Y == "c":
+        print("The temperature in Fahrenheit is", int((X * 9/5) + 32), "degrees F")
+    else:
+        print("The temperature in Celsius is", int((X - 32) * 5/9), "degrees C")
+elif good_weather == "no":
+    print("Okay then. Have a great day, ", name+"!")
+if bad_weather == "yes":
+    X = int(input("Enter a temperature value: "))
+    print()
+    print("Is this in Celsius or Fahrenheit?")
+    Y = str(input("Type C for Celcius and F for Ferenheit: ")).lower()
+    print()
+    if Y == "c":
+        print("The temperature in Fahrenheit is", int((X * 9/5) + 32), "degrees F")
+    else:
+        print("The temperature in Celsius is", int((X - 32) * 5/9), "degrees C")
+elif bad_weather == "no":
+    print("Okay then. I'm sorry once again. I hope you have a great day,",name+"!")

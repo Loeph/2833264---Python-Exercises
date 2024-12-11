@@ -1,0 +1,18 @@
+#Simple Calculator
+print("Let's do some basic arithmetic operations on two numbers.")
+no_1 = int(input('Enter the first number of your choice: '))
+no_2 = int(input('Enter the second number of your choice: '))
+add = no_1 + no_2
+diff = no_1 - no_2
+prod = no_1 * no_2
+quot = no_1/no_2
+print()
+print ("The sum is of both numbers is ", add)
+print()
+print ("The difference between both numbers is ", diff)
+print()
+print ("The product of both numbers is ", prod)
+print()
+print ("The quotient of both numbbers is ", quot)
+print()
+print("Have a great day ahead!")

@@ -16,10 +16,12 @@ if weather == "yes":
     print()
     print("That is very good. Would you like to try a temperature conversion game?")
     good_weather = str(input("Yes or No? ")).lower()
-else:
+elif weather == "no":
     print("I'm really sorry about that. To cheer you up, would you like to try a temperature conversion game?")
     print()
     bad_weather = str(input("Yes or No? ")).lower()
+else:
+    print("This input is incorrect. Please re-run the programme.")
 if good_weather == "yes":
     X = int(input("Enter a temperature value: "))
     print()
@@ -28,8 +30,10 @@ if good_weather == "yes":
     print()
     if Y == "c":
         print("The temperature in Fahrenheit is", int((X * 9/5) + 32), "degrees F")
-    else:
+    elif Y == "f":
         print("The temperature in Celsius is", int((X - 32) * 5/9), "degrees C")
+    else:
+        print("This input is incorrect. Please re-run the programme.")
 elif good_weather == "no":
     print("Okay then. Have a great day, ", name+"!")
 if bad_weather == "yes":
@@ -40,7 +44,9 @@ if bad_weather == "yes":
     print()
     if Y == "c":
         print("The temperature in Fahrenheit is", int((X * 9/5) + 32), "degrees F")
-    else:
+    elif Y == "f":
         print("The temperature in Celsius is", int((X - 32) * 5/9), "degrees C")
+    else:
+        print("This input is incorrect. Please re-run the programme.")
 elif bad_weather == "no":
     print("Okay then. I'm sorry once again. I hope you have a great day,",name+"!")
